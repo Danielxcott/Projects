@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+<title>money exchange calculator</title>
+<meta name="title" content="money exchange calculator">
+<meta name="description" content="now you can easily calculate your exchanges on here. Click the link here, and we will take you to the site.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="money exchange calculator">
+<meta property="og:description" content="now you can easily calculate your exchanges on here. Click the link here, and we will take you to the site.">
+<meta property="og:image" content="logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="money exchange calculator">
+<meta property="twitter:description" content="now you can easily calculate your exchanges on here. Click the link here, and we will take you to the site.">
+<meta property="twitter:image" content="logo.png">
+<link rel="icon" href="logo.png" type="image/icon type">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="night-mode.css">
+</head>
+<body class="night-mode">
+
+<div class="app">
+    <div class="output">
+        <div class="brand-container">
+            <img src="logo.png" alt="" class="logo">
+            <p class="brand">MMEx</p>
+        </div>
+        <div class="result-container">
+            <div class="result" id="result">00.0</div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <form class="calc" id="calc">
+        <div class="input-container container">
+            <label>Input</label>
+            <input type="number" class="input" id="input" min="1" required placeholder="00.0" autofocus>
+        </div>
+        <div class="from-container container">
+            <label>From</label>
+           <select class="from" id="from" required>
+                <option value="" selected>Select currency</option>
+           </select>
+        </div>
+        <div class="to-container container">
+            <label>To</label>
+           <select class="to" id="to" required>
+               
+           </select>
+        </div>
+        <div class="calc-container container">
+            <button class="btn" id="calcBtn">Calculate</button>
+        </div>
+    </form>
+    <div class="history-container">
+        <table class="history">
+            <thead class="">
+                <tr>
+                    <th>Date</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                    
+            </tbody>
+        </table>
+    </div>
+    <div class="btn-one">
+        <button class="clearbtn" onclick="clearbtn()">clear</button>
+    </div>
+</div>
+
+<button class="modebtn" onclick="modechange()">
+    <i class="bi" id="mode-icon" style="color: var(--light);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+          </svg>
+        </i>
+</button>
+
+
+
+    
+</body>
+<script src="data.js"></script>
+    <script src="app.js"></script>
+</html>

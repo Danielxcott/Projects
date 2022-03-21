@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calc">
+        <h1 class="display">0</h1>
+        <div class="keypad">
+            <table>
+                <tr>
+                    <td>
+                        <div class="key" onclick="clearall()">AC</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="clearlast()">C</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay('%')">%</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay('/')">&#xf7;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="key" onclick="showdisplay(7)">7</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay(8)">8</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay(9)">9</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay('*')">&#xd7;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="key" onclick="showdisplay(4)">4</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay(5)">5</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay(6)">6</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay('-')">&#x2212;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="key" onclick="showdisplay(1)">1</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay(2)">2</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay(3)">3</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="showdisplay('+')">&#x2b;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="key zero"  onclick="showdisplay(0)">0</div>
+                    </td>
+                   
+                    <td>
+                        <div class="key" onclick="showdisplay('.')">.</div>
+                    </td>
+                    <td>
+                        <div class="key" onclick="calc()">&#x3d;</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="k.js"></script>
+</html>

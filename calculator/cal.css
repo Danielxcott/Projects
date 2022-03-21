@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+ 
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+}
+.calc{
+    margin: 100px auto;
+    width: 360px ;
+}
+.display{
+    text-align: right;
+    padding: 10px;
+    font-size: 50px;
+    height: 120px;
+    color: #ffffff;
+
+}
+.key{
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5px;
+    font-size: 28px;
+    text-align: center;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    cursor: pointer;
+    user-select: none;
+
+
+}
+.zero{
+    width: 190px;
+    border-radius: 75px;
+}
+tr:first-child td .key{
+    background-color: rgb(167, 164, 164);
+    color: black;
+}
+tr td:last-child .key{
+    background-color: rgb(255, 161, 85);
+}
+tr td:last-child:active .key{
+    background-color: rgb(196, 118, 54);
+}
+tr td:active .key{
+    background-color: rgb(97, 93, 93);
+}
