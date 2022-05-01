@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 98vh;
+    /* margin: 50px auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
+    font-family: 'roboto', sans-serif;
+}
+.music-player{
+    width: 350px;
+    height: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    color: #dbd2cd;
+    box-shadow: 0 40px 100px rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
+    overflow: hidden;
+}
+.music-name,
+.music-artist{
+    text-align: center;
+    text-transform: capitalize;
+}
+.music-name{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.music-artist{
+    font-size: 20px;
+}
+.disk{
+    position: relative;
+    display: block;
+    margin: 120px auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background-image: url(./img/ariana.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+.disk.play{
+    animation-play-state: running;
+}
+.disk::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(143, 143, 143);
+    transform: translate(-50% , -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.song-slider{
+    width: 100%;
+    position: relative;
+}
+.song-seeker{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(143, 143, 143);
+    overflow: hidden;
+}
+.song-seeker::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    background: #d5eebb;
+    box-shadow: -400px 0 0 400px #d5eebb;
+}
+.current-time,
+.duration-time{
+    font-size: 14px;
+}
+.duration-time{
+    position: absolute;
+    right: 0;
+}
+.control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 60%;
+}
+.play-button{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #d5eebb;
+    cursor: pointer;
+}
+.play-button span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 20px;
+    transition: 0.5s;
+    background-color: rgb(143, 143, 143);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    cursor: pointer;
+
+}
+.play-button span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+.play-button.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+.play-button.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+.play-button.pause{
+    animation: wave 2s linear infinite;
+}
+.btn{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #d5eebb;
+    cursor: pointer;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes wave{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.4);
+    }
+}

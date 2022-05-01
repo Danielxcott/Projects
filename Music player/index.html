@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio src="" id="audio"></audio>
+    <div class="music-player">
+        <h1 class="music-name">Song name</h1>
+        <p class="music-artist">Artist name</p>
+
+        <div class="disk"></div>
+        <div class="song-slider">
+            <input type="range" value=0 class="song-seeker">
+            <span class="current-time">0:00</span>
+            <span class="duration-time">0:00</span>
+        </div>
+
+        <div class="control">
+            <button class="btn btn-backward"><img src="img/pre.png" alt=""></button>
+            <div class="play-button pause">
+                <span></span>
+                <span></span>
+            </div>
+            <button class="btn btn-forward"><img src="img/nxt.png" alt=""></button>
+        </div>
+    </div>
+</body>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</html>
